@@ -114,3 +114,11 @@ if there is no \n ,then
 * you have to delcare first
     `string last = get_string("What is your last name? ");`
     `printf("Hello,  %s\n", first);`
+
+* use %s as a placeholder has a problem: if i want 100%
+
+* to solve the problem 
+  `printf("Hello, 100%%s\n")`
+  just double %
+
+* 
