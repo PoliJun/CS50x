@@ -93,4 +93,24 @@ if there is no \n ,then
         libraries
     This inform the compiler I want to use the functionality from the Standard I/O Library
 
+## Fri May 12 13:56:03 CST 2023
 
+* Manual Pages:https://manual.cs50.io
+
+* `string answer = get_string("What's your name:");` 
+    there is a return value of get_string 
+    "=" sign means copy content from right to left
+    type is "string"
+
+* join `printf("hello %s\n",);`
+
+    `string answer = get_string("What is your name? ");`
+    `printf("Hello, %s\n", answer);`
+
+*   `string first = get_string("What is your first name? ");`
+    `string last = get_string("What is your last name? ");`
+    `printf("Hello, %s %s\n", first,last);`
+
+* you have to delcare first
+    `string last = get_string("What is your last name? ");`
+    `printf("Hello,  %s\n", first);`
