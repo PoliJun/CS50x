@@ -1,22 +1,26 @@
 # Lecture 0
-## Tue May  9 15:57:28 CST 2023
+
+## Tue May 9 15:57:28 CST 2023
+
     1. Why use C ?
     use C to know details about the bottom hood
     2. input --> blackbox --> output
-    3. unary 
+    3. unary
         base-1
     4. binary digit --> bit
     5. binary represent numbers. This is smart. (decimal : 1-->10)
         base-2
 
-## Tue May  9 16:10:50 CST 2023
+## Tue May 9 16:10:50 CST 2023
+
     6. byte : 8 bits
         00000000
     7. ASCII
 
-## Tue May  9 23:20:51 CST 2023
+## Tue May 9 23:20:51 CST 2023
+
     8. UNICODE
-    9. type : numbers or string 
+    9. type : numbers or string
     10. RGB
     11. the blackbox is abstraction: you don't have to consider the most underneath hood , you think at high level
     12. algorithm: how you solve the problem
@@ -35,7 +39,7 @@
                     Else if person is later in book
                         fifth step: Open to middle of right half of phone book
                                     go back to line 3
-                    Else 
+                    Else
                         fifth step: Quit
     14. The actions of verbs are functions
     15. The "if"s are conditional
@@ -53,7 +57,7 @@
     19. We don't have to write 0101010, because ancestors solved this problem.
         We can use high level languages like C
     20. https://scratch.mit.edu/
-    
+
 ## Wed May 10 01:37:43 CST 2023
 
     21. event(click), function(say),"hello"(parameter)
@@ -68,57 +72,142 @@
 
     25. control : forever
 
-    26. 
-
+    26.
 
 # Lecture-1 C
 
 ## Thu May 11 10:19:13 CST 2023
 
-* source code -> compiler -> machine code
-* correctness, design, style
-* say -> printf( "hello,world\n ")         
-` #include <stdio.h>
+-   source code -> compiler -> machine code
+-   correctness, design, style
+-   say -> printf( "hello,world\n ")  
+    ` #include <stdio.h>
 
 int main(void)
 {
-    printf("hello world");
+printf("hello world");
 
-} `
-if there is no \n ,then 
-`hello world%` 
+} `if there is no \n ,then `hello world%`
 
-* `#include <stdio.h>`
-    header file 
-        libraries
+-   `#include <stdio.h>`
+    header file
+    libraries
     This inform the compiler I want to use the functionality from the Standard I/O Library
 
 ## Fri May 12 13:56:03 CST 2023
 
-* Manual Pages:https://manual.cs50.io
+-   Manual Pages:https://manual.cs50.io
 
-* `string answer = get_string("What's your name:");` 
-    there is a return value of get_string 
+-   `string answer = get_string("What's your name:");`
+    there is a return value of get_string
     "=" sign means copy content from right to left
     type is "string"
 
-* join `printf("hello %s\n",);`
+-   join `printf("hello %s\n",);`
 
     `string answer = get_string("What is your name? ");`
     `printf("Hello, %s\n", answer);`
 
-*   `string first = get_string("What is your first name? ");`
+-   `string first = get_string("What is your first name? ");`
     `string last = get_string("What is your last name? ");`
     `printf("Hello, %s %s\n", first,last);`
 
-* you have to delcare first
+-   you have to delcare first
     `string last = get_string("What is your last name? ");`
     `printf("Hello,  %s\n", first);`
 
-* use %s as a placeholder has a problem: if i want 100%
+-   use %s as a placeholder has a problem: if i want 100%
 
-* to solve the problem 
-  `printf("Hello, 100%%s\n")`
-  just double %
+-   to solve the problem
+    `printf("Hello, 100%%s\n")`
+    just double %
 
-* 
+-   Types
+    bool, string, int,
+
+-   conditionals
+    `    if(x < y){
+   printf("hello\n")
+}`
+
+                        if(x < y){
+
+                        }else{
+
+                        }
+
+                        if(x > y){
+
+                        }else if(x < y){{
+
+                        }else{
+
+                        }
+
+-   char:
+    double quote "" for string
+    single quote '' for single character
+
+-   character is case sensitive in C : 'a' is different to 'A'
+
+-   OR : ||
+
+-   for spaces : for loop
+    for( int i = 0; i < 3;i++){
+    // states;
+    }
+
+-   variables:
+    declare with type:
+    int x = 5;
+    increase
+    x = x +1; // this means copy right value to the left
+    x++; // increment
+    x--; // decrement
+
+## Fri May 12 22:47:09 CST 2023
+
+-   while loop
+    `int n = 0;`
+    `while (n <3)
+{
+  printf("meow\n");
+}`
+
+-   forever loop
+    while(true){
+
+}
+
+## Sat May 13 10:08:24 CST 2023
+
+-   Linux CLI
+
+-   inner for loop
+
+-   Constant
+    const x = 5;
+
+-   Comments
+    use comments to write pseudo code
+
+-   define a function
+    void print_grid(int size)
+    {
+
+    }
+
+* write the function in the head of the file ,this convince the compiler to trust you
+
+* operators
+
+* integer overflow
+
+* format code
+    %c %f %i %li %s
+
+* truncate
+
+* floating-point imprecision
+ `printf("%.20f",z) // twenty decimal point.`
+
