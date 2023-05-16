@@ -211,3 +211,20 @@ printf("hello world");
 * floating-point imprecision
  `printf("%.20f",z) // twenty decimal point.`
 
+ # Section 1
+
+ ## Tue May 16 09:30:40 CST 2023
+
+### Variables
+    `int calls = 4; //4 is the value`
+    `calls = 5;`
+    Why it's at first line? Because declare first. When you declare and initialize
+    a variable, the computer remembers the type of the variable.
+    If we want to change the value.
+
+#### asigning a variable.
+    function runs first then asings the value to the variable
+
+### Printing the values
+    `printf("calls is %1\n", calls);`
+
