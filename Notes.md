@@ -130,19 +130,19 @@ printf("hello world");
    printf("hello\n")
 }`
 
-                        if(x < y){
+                                if(x < y){
 
-                        }else{
+                                }else{
 
-                        }
+                                }
 
-                        if(x > y){
+                                if(x > y){
 
-                        }else if(x < y){{
+                                }else if(x < y){{
 
-                        }else{
+                                }else{
 
-                        }
+                                }
 
 -   char:
     double quote "" for string
@@ -197,25 +197,26 @@ printf("hello world");
 
     }
 
-* write the function in the head of the file ,this convince the compiler to trust you
+*   write the function in the head of the file ,this convince the compiler to trust you
 
-* operators
+*   operators
 
-* integer overflow
+*   integer overflow
 
-* format code
+*   format code
     %c %f %i %li %s
 
-* truncate
+*   truncate
 
-* floating-point imprecision
- `printf("%.20f",z) // twenty decimal point.`
+*   floating-point imprecision
+    `printf("%.20f",z) // twenty decimal point.`
 
- # Section 1
+# Section 1
 
- ## Tue May 16 09:30:40 CST 2023
+## Tue May 16 09:30:40 CST 2023
 
 ### Variables
+
     `int calls = 4; //4 is the value`
     `calls = 5;`
     Why it's at first line? Because declare first. When you declare and initialize
@@ -223,8 +224,42 @@ printf("hello world");
     If we want to change the value.
 
 #### asigning a variable.
+
     function runs first then asings the value to the variable
 
 ### Printing the values
-    `printf("calls is %1\n", calls);`
 
+    printf("calls is %1\n", calls);
+
+### Types and format codes
+
+    int (%i)    long (%li)   char (%c)
+    float (%f)  double (%f)  string(%s)
+
+### Excersize
+
+#### the context
+
+    int i = 0;
+    while (i <10)
+    {
+        printf("%i\n,i");
+
+    }
+
+    // i in the for loop only can be used in the scope int the for loop
+    for(int i = 0; i <10; i++)
+    {
+        printf("%i\n,i");
+    }
+    for loop : 
+    first roll: do int i = 0, and run the code, then ask if i < 10, if true
+    then : when the code run to the end, do i++; then ask if i < 10;
+
+    // This is do while loop. The code run at least one time
+    int n;
+    do
+    {
+        n = get_int("n: ");
+    }
+    while(n <= 0);
