@@ -101,24 +101,30 @@ printf("hello world");
 -   ```C
     string answer = get_string("What's your name:");
     ```
+
     there is a return value of get_string
     "=" sign means copy content from right to left
     type is "string"
 
--   join 
+-   join
+
 ```C
      printf("hello %s\n",);
 
     string answer = get_string("What is your name? ");
     printf("Hello, %s\n", answer);
 ```
--  
+
+-
+
 ```C
  `string first = get_string("What is your first name? ");`
     `string last = get_string("What is your last name? ");`
     `printf("Hello, %s %s\n", first,last);`
 ```
+
 -   you have to delcare first
+
 ```C
     `string last = get_string("What is your last name? ");`
     `printf("Hello,  %s\n", first);`
@@ -138,19 +144,19 @@ printf("hello world");
    printf("hello\n")
 }`
 
-                                                                if(x < y){
+                                                                        if(x < y){
 
-                                                                }else{
+                                                                        }else{
 
-                                                                }
+                                                                        }
 
-                                                                if(x > y){
+                                                                        if(x > y){
 
-                                                                }else if(x < y){{
+                                                                        }else if(x < y){{
 
-                                                                }else{
+                                                                        }else{
 
-                                                                }
+                                                                        }
 
 -   char:
     double quote "" for string
@@ -325,6 +331,7 @@ printf("hello world");
 -   Short hand:
     ```C
     x -= 5; // x = x - 5;
+    ```
 
 ### Boolean Expressions
 
@@ -387,3 +394,29 @@ while (x > 0) {
 *   ```C
       int x = (exp) ? 5:6; // the question mark
     ```
+
+### Loops
+
+There is three kinds of loops
+
+-   while(true)
+
+    -   ```C
+          while(/** boolean expression */)
+          {
+
+          }
+        ```
+
+    -   ```C
+          do {
+
+          }while(/**boolean-expr*/);
+        ```
+
+    *   ```C
+          for(int i = 0; i < 10; i++)
+          {
+
+          }
+        ```
