@@ -98,23 +98,31 @@ printf("hello world");
 
 -   Manual Pages:https://manual.cs50.io
 
--   `string answer = get_string("What's your name:");`
+-   ```C
+    string answer = get_string("What's your name:");
+    ```
     there is a return value of get_string
     "=" sign means copy content from right to left
     type is "string"
 
--   join `printf("hello %s\n",);`
+-   join 
+```C
+     printf("hello %s\n",);
 
-    `string answer = get_string("What is your name? ");`
-    `printf("Hello, %s\n", answer);`
-
--   `string first = get_string("What is your first name? ");`
+    string answer = get_string("What is your name? ");
+    printf("Hello, %s\n", answer);
+```
+-  
+```C
+ `string first = get_string("What is your first name? ");`
     `string last = get_string("What is your last name? ");`
     `printf("Hello, %s %s\n", first,last);`
-
+```
 -   you have to delcare first
+```C
     `string last = get_string("What is your last name? ");`
     `printf("Hello,  %s\n", first);`
+```
 
 -   use %s as a placeholder has a problem: if i want 100%
 
@@ -126,25 +134,23 @@ printf("hello world");
     bool, string, int,
 
 -   conditionals
-    `
-        if(x < y){
+    `        if(x < y){
    printf("hello\n")
-}
-`
+}`
 
-                                if(x < y){
+                                                                if(x < y){
 
-                                }else{
+                                                                }else{
 
-                                }
+                                                                }
 
-                                if(x > y){
+                                                                if(x > y){
 
-                                }else if(x < y){{
+                                                                }else if(x < y){{
 
-                                }else{
+                                                                }else{
 
-                                }
+                                                                }
 
 -   char:
     double quote "" for string
@@ -241,6 +247,7 @@ printf("hello world");
 ### Excersize
 
 #### the context
+
     ```
     int i = 0;
     while (i <10)
@@ -254,7 +261,7 @@ printf("hello world");
     {
         printf("%i\n,i");
     }
-    for loop : 
+    for loop :
     first roll: do int i = 0, and run the code, then ask if i < 10, if true
     then : when the code run to the end, do i++; then ask if i < 10;
 
@@ -266,63 +273,117 @@ printf("hello world");
     }
     while(n <= 0);
     ```
-## Fri May 26 10:23:35 CST 2023
-### Data Types
-* int
-    * The int data type is used for variables taht will store integers
-    * Integers always take 4 bytes of memory (32 bits) .
-    * singned and unsigned integers
-* char
-    * 1 single character
-    * 1 byte
-* float
-    * floating point values, also known as real numbers
-    * 4 bytes of memory
-* double
-    * floating point values, also known as real numbers
-    * 8 bytes of memory
-    * more precise real numbers
-* void
-    * This is not a data type, but a type.
-* bool
-    * Boolean value: True and false
-    * Be sure to #include<cs50.h> atop your programs if you wish to use the bool type
-    * in C, bool is not a default dafault data type
-* string
-    * series of characters
-    * be sure to #include<cs50.h> to use string type
 
-* Creating a variable
-    * specify the data type and give it a name
+## Fri May 26 10:23:35 CST 2023
+
+### Data Types
+
+-   int
+    -   The int data type is used for variables taht will store integers
+    -   Integers always take 4 bytes of memory (32 bits) .
+    -   singned and unsigned integers
+-   char
+    -   1 single character
+    -   1 byte
+-   float
+    -   floating point values, also known as real numbers
+    -   4 bytes of memory
+-   double
+    -   floating point values, also known as real numbers
+    -   8 bytes of memory
+    -   more precise real numbers
+-   void
+    -   This is not a data type, but a type.
+-   bool
+    -   Boolean value: True and false
+    -   Be sure to #include<cs50.h> atop your programs if you wish to use the bool type
+    -   in C, bool is not a default dafault data type
+-   string
+
+    -   series of characters
+    -   be sure to #include<cs50.h> to use string type
+
+-   Creating a variable
+    -   specify the data type and give it a name
         int number;
         char letter;
-    * create multiple variables of same type
+    -   create multiple variables of same type
         int height, width;
         float sqrt2, sqrt3, pi;
-    * in general, only declare variables when you need them
-    * using a variable
-        int number; // delcaration 
+    -   in general, only declare variables when you need them
+    -   using a variable
+        int number; // delcaration
         number = 17; // assignment
         char letter = 'h'; // initialization
-        you can't redeclare a variable.     
+        you can't redeclare a variable.
 
 ### Arithmetic Operators
-*   in C , we can + , - , *, /.
-*   We also have modulus operator (%).
+
+-   in C , we can + , - , \*, /.
+-   We also have modulus operator (%).
     The value on the right asigned to the left
-*   Short hand:
-    x *= 5; // x = x * 5;
+-   Short hand:
+    ```C
+    x -= 5; // x = x - 5;
+
 ### Boolean Expressions
-* Boolean expressions are used in C for comparing with values
-* In C, every nonzero value equivalent to true, and zero is false(negative value is also true)
-* There's two main types of Boolean expressions: logical operators and relational operators.
-    * Logical operators:
+
+-   Boolean expressions are used in C for comparing with values
+-   In C, every nonzero value equivalent to true, and zero is false(negative value is also true)
+-   There's two main types of Boolean expressions: logical operators and relational operators.
+    -   Logical operators:
         AND (&&)
         OR (||)
         NOT (!)
-    * Relational operators:
+    -   Relational operators:
         Less than or equal to(x <= y)
         Greater than or equal to(x >= y)
         Equality(==)
         Inequality(!=)
 
+### Conditional Statements
+
+-   ```C
+    if (boolean-expression)
+    {
+
+    }else if{
+
+    }else{
+
+    }
+    ```
+
+*   mutually conditions and non-mutually conditions
+
+```java
+    if (x > 0) {
+        print("x is positive");
+    } // mutually conditions
+```
+
+```java
+while (x > 0) {
+  print("x is positive");
+  x--;
+} // non-mutually conditions
+```
+
+-   switch():
+    ```C
+    int x = GetInt();
+    switch (x) {
+        case 0:
+            printf("zero\n");
+            break;
+        case 1:
+            printf("one\n");
+            break;
+        default:
+            printf("Sorry!\n");
+    ```
+    -   It's important to break; between each case, or you will "fall through" eachcase ( unless that is desired bahavior).
+
+*   ```C
+      int x = (exp) ? 5:6; // the question mark
+    ```
