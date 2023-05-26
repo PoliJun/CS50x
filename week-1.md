@@ -306,3 +306,23 @@ printf("hello world");
         char letter = 'h'; // initialization
         you can't redeclare a variable.     
 
+### Arithmetic Operators
+*   in C , we can + , - , *, /.
+*   We also have modulus operator (%).
+    The value on the right asigned to the left
+*   Short hand:
+    x *= 5; // x = x * 5;
+### Boolean Expressions
+* Boolean expressions are used in C for comparing with values
+* In C, every nonzero value equivalent to true, and zero is false(negative value is also true)
+* There's two main types of Boolean expressions: logical operators and relational operators.
+    * Logical operators:
+        AND (&&)
+        OR (||)
+        NOT (!)
+    * Relational operators:
+        Less than or equal to(x <= y)
+        Greater than or equal to(x >= y)
+        Equality(==)
+        Inequality(!=)
+
