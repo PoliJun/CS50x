@@ -126,9 +126,11 @@ printf("hello world");
     bool, string, int,
 
 -   conditionals
-    `    if(x < y){
+    `
+        if(x < y){
    printf("hello\n")
-}`
+}
+`
 
                                 if(x < y){
 
@@ -239,7 +241,7 @@ printf("hello world");
 ### Excersize
 
 #### the context
-
+    ```
     int i = 0;
     while (i <10)
     {
@@ -263,3 +265,8 @@ printf("hello world");
         n = get_int("n: ");
     }
     while(n <= 0);
+    ```
+## Fri May 26 10:23:35 CST 2023
+### Data Types
+    
+
