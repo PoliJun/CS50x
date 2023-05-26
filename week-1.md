@@ -268,5 +268,41 @@ printf("hello world");
     ```
 ## Fri May 26 10:23:35 CST 2023
 ### Data Types
-    
+* int
+    * The int data type is used for variables taht will store integers
+    * Integers always take 4 bytes of memory (32 bits) .
+    * singned and unsigned integers
+* char
+    * 1 single character
+    * 1 byte
+* float
+    * floating point values, also known as real numbers
+    * 4 bytes of memory
+* double
+    * floating point values, also known as real numbers
+    * 8 bytes of memory
+    * more precise real numbers
+* void
+    * This is not a data type, but a type.
+* bool
+    * Boolean value: True and false
+    * Be sure to #include<cs50.h> atop your programs if you wish to use the bool type
+    * in C, bool is not a default dafault data type
+* string
+    * series of characters
+    * be sure to #include<cs50.h> to use string type
+
+* Creating a variable
+    * specify the data type and give it a name
+        int number;
+        char letter;
+    * create multiple variables of same type
+        int height, width;
+        float sqrt2, sqrt3, pi;
+    * in general, only declare variables when you need them
+    * using a variable
+        int number; // delcaration 
+        number = 17; // assignment
+        char letter = 'h'; // initialization
+        you can't redeclare a variable.     
 
