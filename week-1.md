@@ -144,19 +144,19 @@ printf("hello world");
    printf("hello\n")
 }`
 
-                                                                        if(x < y){
+                                                                            if(x < y){
 
-                                                                        }else{
+                                                                            }else{
 
-                                                                        }
+                                                                            }
 
-                                                                        if(x > y){
+                                                                            if(x > y){
 
-                                                                        }else if(x < y){{
+                                                                            }else if(x < y){{
 
-                                                                        }else{
+                                                                            }else{
 
-                                                                        }
+                                                                            }
 
 -   char:
     double quote "" for string
@@ -420,3 +420,18 @@ There is three kinds of loops
 
           }
         ```
+
+### Command Line
+
+-   `ls`
+-   `cd <directory>`
+-   `pwd`
+-   copy a directory:
+    `cp -r pset0 pset3`
+-   rm <file>:
+    * `rm hi.txt`.
+    * delete forcely without answer questions:`rm -f hi.txt`.
+    * delete a directory:`rm -r directory`,`rm -rf directory`.
+    * You need to very carefully using `rm -rf`.
+*   move/rename:
+    * `mv greedy.c gredy.c` // this changes the name greedy.c to gredy.c
