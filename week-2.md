@@ -175,3 +175,25 @@ The exit status is a numerical value returned by a command or a program when it 
 
 -   decryption
     > ciphertext and key --> decryption --> plaintext
+
+# Section 2
+
+## Think. Pair. Share.
+
+-   What are the steps involved in compilation
+    > how comiled into binary code : first into assembly code
+    > `$ clang -o hello hello.c`
+-   What are arrays?
+    > types matters for how much memory to allocate to
+    > `int hours[5]`: name, size, type
+    1. declare an array
+    2. set the first
+-   What are strings?
+    > 32 upper to lower
+-   What's the point of command-line arguments?
+    > arv[] argument vector
+-   What makes for good design?
+
+# Shorts
+
+## Functions
