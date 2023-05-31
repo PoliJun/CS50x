@@ -166,3 +166,12 @@ The exit status is a numerical value returned by a command or a program when it 
         > For example, if you run the `ls` command, which lists the files and directories in the current directory, and then run `echo $?`, it will display the exit status of the `ls` command. If the `ls` command was successful, the exit status will be 0, and `echo $?` will display 0. If the `ls` command encountered an error, the exit status will be a non-zero value, and `echo $?` will display that value.
         >
         > Overall, `echo $?` is a useful command for debugging shell scripts and checking the exit status of commands or programs that were previously executed.
+
+## cryptography
+
+-   encryption
+
+    > plaintext and key --> cipher --> ciphertext
+
+-   decryption
+    > ciphertext and key --> decryption --> plaintext
