@@ -197,3 +197,98 @@ The exit status is a numerical value returned by a command or a program when it 
 # Shorts
 
 ## Functions
+
+-   What is a function
+    -   A black box with a set of 0+ inputs and 1 output
+        > int func(a,b,c) {return 0 }
+    -   Why call it a black box
+        -   if we aren't writing the functions ourselves, we don't need to know the underlying implementation.
+        -   That's part of the contract of using functions. The behavior is typically predicatable based on that name.That's why most functions have clear, obvious(ish) names, and are well-documented.
+-   Why use functions?
+    -   Organization
+        -   functions help break up a complicated problem into more manageable subparts.
+    -   Simplification
+        -   Smaller components tend to be easier to design, implement, and debug.
+    -   Reusability
+        -   Functions can be recycled; you only need to write them once, but can use them as often as you need!
+-   Function Declarations
+
+    -   The first step to creating a function is to declare it. This gives the compiler a heads-up that a user-written function appears in the code.
+
+        > return-type name(argument-list);
+
+        ```C
+        int add_two_ints(int a, int b);
+        ```
+
+    -   Function delarations should always go atop your code, before you begin writing main().
+    -   There is a standard form that every function declaration follows.
+
+-   A function to mutltiple two floating point numbers.
+
+    ```C
+    float mult_two_reals(float a, float b); // the semicolon indicates that that is a function delaration.
+
+    float mul_two_reals(float a, float b)
+    {
+        float product = x * y;
+        return product; // we can just return x * y
+    }
+    ```
+
+-   Function calls
+-   Function Miscellany
+
+## Variable Scope
+
+-   Scope is a characteristic of a variable that defines from which functions that variable may be accessed.
+    -   Local variables can only be accessed within the functions in which they are created.
+    -   Global variables can be accessed by any function in the program.
+-   Why does this distinction matter? For the most part, local variables in C are passed by value in fuction calls.
+-   When a variable is passed by value, the callee receives a copy of the passed variable, not the variable itself. **THIS IS VERY IMPORTANT**
+-   That means that the variable in the caller is unchanged unless overwritten.
+
+## Debugging("Step through")
+
+-   `debug50`
+-   setp over
+
+## Duplicate of 'Debugging("setp into")'
+
+-   step into the function to see the details
+
+## Arrays
+
+-   Arrays are a fundamental **data structure**, and they are extremely useful!
+-   We use arrays to hold values of the same type at contiguous memory locations.
+-   One way to analogize the notion of array is to think of your local post office, which usually has a large bank of post office boxes.
+-   In C, the elements of an array are indexed starting from 0.
+-   If an array consists of n elements, the first element is located at index 0 and the last element is located at index (n-1).
+-   C is lenient. **IT WILL NOT PREVENT YOU FROM GOING "OUT OF BOUNDS" OF YOUR ARRAY; BE CAREFUL!**
+-   Array declarations: **type, name, size.**
+    -   instantiation declarations
+    -   individual element syntax
+-   Arrays can consist of more than a single dimension.
+    ```C
+    bool battleship[10][10];
+    ```
+-   While we can treat individual elements of arrays as variables, we cannot treat entire arrays themselves as variables.
+-   We cannot, for instance, assign one array to another using the assignment operator. That is not legal C.
+-   Instead, we must use a loop to copy over the elements one at a time.
+-   Pass by value:
+    -   Recall that most variables in C are **passed by value** in function calls.
+    -   Arrays do not follow this rule. Rather, they are **passed by reference**. The callee receives the actual array, not a copy of it.
+        -   What does it mean when the callee manipulates elements of the array?
+
+## Command Line Arguments
+
+-   To collect so called **command-line arguments** from the user, declare main as:
+
+    ```C
+    int main(int argc, string argv[])
+    {
+
+    }
+    ```
+
+-   This two special arguments enable you to know what data the user provided at the command line and how much data they provided.
