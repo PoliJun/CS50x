@@ -58,10 +58,41 @@
 ## typeof struct
 
 ```C
-typeof struct
+typedef struct
 {
     string name;
     string number;
 }
 person;
 ```
+
+## sorting
+
+```
+Repeat n-1 times
+    For i from 0 to n-2
+        If numbers[i] and numbers[i+1] out of order
+            Swap them
+    If no swaps
+        Quit
+```
+
+This is O(n^2)
+
+## recursion
+
+-   set a break point
+
+## merge sort
+
+-   recursion
+-   O(n log n) **But WHY?**
+-   need more spaces
+
+```
+Sort left half of numbers
+Sort right half of numbers
+Merge sorted halves
+```
+
+## time
