@@ -3,5 +3,6 @@
     "files.associations": {
         "string": "c",
         "iosfwd": "c"
-    }
+    },
+    "editor.fontFamily": "IntelOne Mono,JetBrains Mono"
 }
