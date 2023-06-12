@@ -211,3 +211,178 @@ void swap(int *a, int *b)
 > The s array might be located in an area of memory that is not protected by the operating system, so the program is allowed to write beyond its boundaries without causing a segmentation fault. However, this is still undefined behavior and should be avoided.
 >
 > In general, it is important to always allocate enough memory for the data you are working with and to use safe programming practices to avoid undefined behavior.
+
+# Section 4
+
+## Pointers
+
+-   Syntax
+
+## Read and Write Data from a File
+
+-   buffer
+    > its structure is like an array. bytes back to back to back.
+-   file signature
+    > It is a sequence of bytes at the beginning of a file that identifies the file format or type.
+-   remember to fclose the file
+
+## Dynamic Memory
+
+-   malloc
+-   remember to free the malloc memory
+
+# Shorts
+
+## Hexadecimal
+
+-   16-based
+
+## Pointers
+
+-   RAM
+-   A pointer is nothing more than an address
+-   NULL pointer
+    > A null pointer is a pointer variable that has a value of null, which means the pointer does not point to any memory location. In other words, a null pointer does not reference any object or function in memory.
+-   You can check if a pointer is null using `==`
+-   ampersand `&` operator
+    > returns the memory address of a variable
+-   `*` , known as **difference operator**
+    > It "goes to the reference" and accesses the data at that memory location.
+
+## Defining Custom Data Types
+
+```c
+typedef unsigned char byte;
+typedef char* string;
+```
+
+`typedef <old name> <new name>`
+
+```c
+struct car
+{
+    int year;
+    char model[10];
+    char plate[7];
+};
+
+typedef struct car car_t;
+```
+
+OR
+
+```c
+struct car
+{
+    int year;
+    char model[10];
+    char plate[7];
+}
+car_t;
+```
+
+## Dynamic Memory Allocation
+
+```c
+// Statically obtain an integer
+int x;
+
+// dynamically obtain an integer
+int *px = malloc(sizeof(int));
+
+// get an integer from the user
+int x = GetInt();
+
+// array of floats on the stack
+float stack_array[x];
+
+// array of floats on the heap
+float* heap_array = malloc(x * sizeof(float));
+```
+
+-   **Three golden rules**
+    1. Every block of memory that you `malloc()` must subsequently be `free()`d.
+    2. Only memory that you `malloc()` should be `free()`d.
+    3. Do not `free()` a block of memory more than once.
+
+## Call Stack
+
+**This is why recursion works**
+
+> -   These frames are arranged in a stack. The frame for the most-
+>     recently called function is always on the top of the stack.
+>
+> -   When a new function is called, a new frame is pushed onto the
+>     top of the stack and becomes the active frame.
+>
+> -   When a function finishes its work, its frame is popped off of
+>     the stack, and the frame immediately below it becomes the
+>     new, active, function on the top of the stack. This function
+>     picks up immediately where it left off.
+
+<!-- ![Call Stack](pictures/Screenshot_2023-06-12-11-30-34-020_org.edx.mobile.jpg) -->
+
+## File Pointers
+
+-   The file manipulation functions all live in stdio.h
+    -   All of them accept FILE\* as one of their parameters, except for the function fopen(), which is used to get a file pointer in the first place.
+-   Some of the most common file input/output(I/O) functions that we'll be working with are:
+    > `fopen()` `fclose()` `fgetc()` `fputc()` `fread()` `fwrite()`
+-   fopen()
+    -   Opens a file and returns a file pointer to it.
+    -   Always check the return value to make sure you don't get back NULL.  
+         `FILE* ptr = fopen(<filename>, <operation>);`
+        > operations: "r", "w", "a". read, write, append. read would overwrite the file.
+-   fclose()
+    -   Closes the file pointed to by the given file pointer.  
+        `fclose(<filename>);`
+-   fgetc()
+
+    -   Reads and returns the next character from the file pointed to.
+    -   Note: The operation of the file pointer passed in as a parameter must be "r" for read, or you will suffer an error.  
+        `char ch = fgetc(<file pointer>);`
+
+    ```c
+    char ch;
+
+    // EOF is "End of File" character, is defined as an integer constant with a value of -1.
+    while((ch = fgetc(ptr)) != EOF)
+        printf("%c", ch);
+    ```
+
+-   fputc()
+    -   Writes or appends the specified character to the pointed-to file.
+    -   Note: The operation of the file pointer passed in as a parameter must be "w" for write or "a" for append, or you will suffer an error.
+        `fputc(<character>, <file pointer>);`
+    ```c
+    // This is a cp
+    char ch;
+    while((ch = fgetc(ptr)) != EOF)
+        fputc(ch, ptr2);
+    ```
+-   fread()
+    -   Reads <qty> units of size <size> from the file pointed to and stores them in memory in a buffer(usually an array) pointed to by <buffer>.
+    -   Note: The operation of the file pointer passed in as a parameter must be "r" for read, or you will suffer an error.
+        `fread(<buffer>, <size>, <qty>, <file pointer>);`
+    ```c
+    double* arr2 = malloc(sizeof(double) * 80);
+    fread(arr2, sizeof(double), 80, ptr);
+    ```
+    OR
+    ```c
+    char c;
+    fread(&c, sizeof(char), 1, ptr);
+    ```
+-   fwrite()
+    -   Writes <qty> units of size <size> to the file pointed to by reading them from a buffer ( usually an array) pointed to by <buffer>.
+    -   Note: The operation of the file pointer passed in as a parameter must be "w" for write or "a" for append, or you will suffer an error.  
+        `fwrite(<buffer>, <size>, <qty>, <file pointer>);`
+    ```c
+    int arr[10];
+    fwrite(arr, sizeof(int), 10. ptr);
+    ```
+    OR
+    ```c
+    char c;
+    fwrite(&c, sizeof(char), 1, ptr);
+    ```
