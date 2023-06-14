@@ -11,8 +11,13 @@
 
 -   LILO
     > Last in first out
-- push
+-   push
     > add to the top, pushing on the top
-- pop
+-   pop
     > remove from the top, poping off the top
 
+## `realloc(list, sizeof(int));`
+
+## linked lists
+
+-   node
