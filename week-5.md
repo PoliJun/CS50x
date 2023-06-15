@@ -21,3 +21,14 @@
 ## linked lists
 
 -   node
+    ```c
+    typedef struct node
+    {
+        int number;
+        node *next;
+    }
+    node;
+    ```
+- there is no way for a linked list to do binary search
+    ```c
+    node *list;
