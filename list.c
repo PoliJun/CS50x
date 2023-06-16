@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
         node *n = malloc(sizeof(node));
         if (n == NULL)
-        {   
+        {
             free(list);
             return 1;
         }
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
     // free every node with a while loop
     while (ptr != NULL)
     {
-        /* code */
+
         node *next = ptr->next;
         free(ptr);
         ptr = next;

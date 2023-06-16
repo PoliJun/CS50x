@@ -32,3 +32,21 @@
 - there is no way for a linked list to do binary search
     ```c
     node *list;
+    
+## while loop to free memory
+```c
+// free every node with a while loop
+    while (ptr != NULL)
+    {
+        /* code */
+        node *next = ptr->next;
+        free(ptr);
+        ptr = next;
+    }
+```
+
+## trees
+- binary search trees
+## dictionaries
+- hashing
+
