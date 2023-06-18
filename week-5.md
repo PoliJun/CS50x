@@ -50,3 +50,6 @@
 ## dictionaries
 - hashing
 
+- hash tables
+- tries
+    > try is a tree each of whose nodes is an array.
