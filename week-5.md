@@ -29,11 +29,15 @@
     }
     node;
     ```
-- there is no way for a linked list to do binary search
+-   there is no way for a linked list to do binary search
+
     ```c
     node *list;
-    
+
+    ```
+
 ## while loop to free memory
+
 ```c
 // free every node with a while loop
     while (ptr != NULL)
@@ -46,10 +50,35 @@
 ```
 
 ## trees
-- binary search trees
-## dictionaries
-- hashing
 
-- hash tables
-- tries
+-   binary search trees
+
+## dictionaries
+
+-   hashing
+
+-   hash tables
+-   tries
     > try is a tree each of whose nodes is an array.
+
+# Section 5
+
+## Wake Word
+
+-   tries
+
+    > memory is cheap, but you also need time to allocate memory, to put things into memory, and may losse it.
+
+-   trade-offs
+-   Nodes
+
+## Creating a Linked List
+
+## Hash Function
+
+> "Hey!" --> hash function --> 7
+
+-   A good hash function ...
+    -   Always gives you the same value for the same input
+    -   Produces an even distribution across buckets
+    -   Uses all buckets
