@@ -7,6 +7,7 @@ typedef struct node
     struct node *next;
 } node;
 
+int unload( node * ptr);
 int main(int argc, char *argv[])
 {
     node *list = NULL;
@@ -38,11 +39,27 @@ int main(int argc, char *argv[])
     printf("\n");
 
     // free every node with a while loop
-    while (ptr != NULL)
-    {
+    unload(ptr);
+    // while (ptr != NULL)
+    // {
 
-        node *next = ptr->next;
-        free(ptr);
-        ptr = next;
+    //     node *next = ptr->next;
+    //     free(ptr);
+    //     ptr = next;
+    // }
+
+}
+int unload(node *ptr)
+{
+    if (ptr == NULL)
+    {
+        return 0;
     }
+    else
+    {
+        unload(ptr->next);
+        free(ptr);
+        return 1;
+    }
+    
 }
