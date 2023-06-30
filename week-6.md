@@ -399,3 +399,92 @@ with open("phonebook.csv", "a") as file:
 -   `text = file.read()`, then we don't need to `import csv`, but this is not useful
 -   `file_reader = csv.DictReader(file)`
 -   add dictionary to the list
+
+# Shorts
+
+## python
+
+### Python Syntax
+
+-   Variables
+    -   Must initialize when to use a variable, but without data type declaration
+-   Conditionals
+    -   `or`
+    -   `elif`
+    -   `letters_only = True if input().isalpha() else False`
+-   Loops
+    -   while loop
+        ```python
+        counter = 0
+        while counter < 100:
+            print(counter)
+            counter += 1 # There is no i++ syntax in Python
+        ```
+    -   for loop
+        ```python
+        # range() function, start point, end point, skip by point
+        for i in range(0, 100,2):
+            print(i)
+        ```
+        > This is corresponding to the following
+        ```java
+        for(int i = 0; i < 100; i += 2){
+            print(i)
+        }
+        ```
+-   lists
+    > There is no arrays in Python, but there are lists
+    - initialize a list
+        > `nums = []`  
+        > `nums = [x for x in range(500)]`  
+        > `nums = list()`
+    - methods
+        > `nums.insert(4, 5)`. This would insert 5 at the forth position
+        > `nums.append(5)`. This would append 5 at the end of the list.
+        > `nums[len(nums):] = [5]`. This would append 5 at the end of the list.
+- Tuples
+    > Imutable set of data
+    ```python
+    presidents = [
+        ("George Washington", 1789),
+        ("John Adams", 1797),
+        ("Thomas Jefferson", 1801)
+    ]
+    for prez, year in presidents:
+        print("In {1}, {0} took office".format(prez, year))
+        # same as 
+        print(f"In {year}, {prez} took office")   
+    ```
+- Dictionary
+    - currly brackets `{}`
+    - `key:value` pairs
+    - Loops in dictionary
+        > We don't have index likely in C    
+        > ```python
+        > for pie in pizzas:
+        >     print(pie) # this prints all the keys in pizzas
+        > for pie, price in pizzas.items(): # pizzas.items() method returns a list of tuple pairs.
+        >     print(price) # this prints out values, but this is not maintain the original order.
+        > for pie, price in pizzas.items():
+        >     print("A whole {} pizza costs ${}".format(pie, price)) # This would be fine.
+        > ```
+- functions
+    - don't need to specify the return type, nor the data type of any parameters.
+    - All functions are introduced with the `def` key word.
+    - if you want to define main nonetheless, you must at the very end of your code have:
+        ```python
+        if __name__ == '__main__':
+            main()
+        ```
+- Objects
+    - We don't pass objects into functions as parameters, we call methods on objects: `obj.method()`.
+    - `class` keyword: create a new kind of object
+    - In defining each method of an object, self should be its first parameter, which stipulates on what object the method is called.
+- style
+    - good style is crucial in Python
+    - **tabs** and **indentation** actually matter in this language
+    - No more curly braces to delineate blocks
+- including files
+    - `import module`
+- python command line
+- your program will run through the interpreter, which will execute everything inside of the file, top to bottom
