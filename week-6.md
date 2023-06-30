@@ -315,10 +315,87 @@ with open("phonebook.csv", "a") as file:
 ```
 
 -   DictWriter
-    > This doesn't have to worry about the order of values  
-    
+
+    > This doesn't have to worry about the order of values
+
     > ```python
     > writer = csv.DictWriter(file, fieldnames=["name","number"])
     > writer.writerow({"name": name, "number": number})
     > ```
+
 ## import pyttsx3
+
+# Section 6
+
+## Methods
+
+-   `text.strip()`
+-   `text.lower()` and `text.capitalize()` and `text.upper()`
+-   dot syntax
+
+## loops in python
+
+-   ```python
+      for c in string:
+      print(c)
+    ```
+-   ```python
+    words = text.split()
+    for word in words:
+        print(word)
+    ```
+-   for in loops the data type in a list
+-   `if word in words`
+-   `for word in words[2:]`
+-   `for word in words[1:5]`
+-   ```python
+    for word in words:
+        if "g" in word:
+            print(word)
+    ```
+-   ```python
+    # underscore means that the variable name doesn't matter
+    for _ in words:
+        print("Goodnight!")
+    print()
+    ```
+
+## Dictionary
+
+-   ```python
+    book = dict()
+    book["title"] = "Corduroy"
+    book["author"] = "Don Freeman"
+    print(book["title"])
+
+    # Corduroy
+    ```
+
+-   A list of dictionaries
+    ```python
+    [{"title": "Corduroy", "author": "Don Freeman"},{"title": "Goodnight", "Author": "Rowlin"} ]
+    ```
+-   Add dictionaries to a list
+
+    ```python
+    books=[]
+
+    # Add three books to your shelf
+    for i in range(3):
+        book=dict()
+        book['title']=input("Enter title of book: ").strip().Capitalize()
+        book['author']=input("Enter author of book: ").strip().Capitalize()
+
+        books.append(book)
+
+    for book in books:
+        print(book['title'])
+    ```
+
+## Libraries and Module
+
+-   csv modules
+-   `with open("books.csv") as file:` and then indent at the new line, without indent, the file would be closed.
+-   `text = file.read()`, then we don't need to `import csv`, but this is not useful
+-   `file_reader = csv.DictReader(file)`
+-   add dictionary to the list
