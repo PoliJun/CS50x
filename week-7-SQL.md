@@ -122,3 +122,12 @@ rows = db.execute(
 row = rows[0]
 print(row["n"])
 ```
+- place holder: `?`
+    > `rows = db.execute("SELECT * FROM favorites WHERE problem = ?", favorite)`  
+    > **Don't use {favorite}, this would lead you to a hack if  you trust what people input**
+## multi access
+- BEGIN TRANSACTION
+- COMMIT
+- ROLLBACK
+## SQL injection attack
+> **Don't use {favorite}, this would lead you to a hack if  you trust what people input**
