@@ -172,7 +172,7 @@ the house repeatedly, so we create a new table of house.
 -   Each table should be a collection of a **single entity**.
 -   For example, we should have a different table for each of students, house, and student-house assignments.
 
-    > The primary key of the assignments: ?     
+    > The primary key of the assignments: ?  
     > The primary key is inside of the current table, the foreing key is reference to another table.  
     > **If there's not an assignment table, if I want change the name of a house, it would be a heavy work.**
 
@@ -182,26 +182,32 @@ the house repeatedly, so we create a new table of house.
     -   ...
 -   constraints
     -   NOT NULL
-    - ...
-- JOIN  
+    -   ...
+-   JOIN
     > `SELECT house, COUNT(student_id) FROM assignments JOIN house ON house.id = assignments.house_id;`
+
 # Shorts
-## SQL 
+
+## SQL
+
 **The Structured Query Language**
-- CHAR and VARCHAR  
+
+-   CHAR and VARCHAR
     > Unlike C, CHAR(10) always store 10 memmories, VARCHAR(99) store 1,2,3,4,5... up to 99 memories.
-- choose the right  primary key, make sure it is **unique**
-- ID number, which is the primary key, should set it autoincrement
+-   choose the right primary key, make sure it is **unique**
+-   ID number, which is the primary key, should set it autoincrement
+
 ## SELECT
-- Extract information from a table.
-    > `SELECT <columns> FROM <table> WHERE <predicate> ORDER BY <column>` 
+
+-   Extract information from a table.
+    > `SELECT <columns> FROM <table> WHERE <predicate> ORDER BY <column>`
     > `*` : every column
-- SELECT(JOIN)
-    - Extract information from multiple tables  
-        > `SELECT users.fullname, moms.mother FROM users JOIN moms ON users.username = moms.username`  
-- UPDATE
+-   SELECT(JOIN)
+    -   Extract information from multiple tables
+        > `SELECT users.fullname, moms.mother FROM users JOIN moms ON users.username = moms.username`
+-   UPDATE
     > Modify information in a table.  
     > `UPDATE <table> SET <column> = <value> WHERE <predicate>;`
-- DELETE
+-   DELETE
     > Remove information from a table  
     > `DELETE FROM users WHERE <predicate>;`
