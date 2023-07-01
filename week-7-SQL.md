@@ -122,12 +122,86 @@ rows = db.execute(
 row = rows[0]
 print(row["n"])
 ```
-- place holder: `?`
+
+-   place holder: `?`
     > `rows = db.execute("SELECT * FROM favorites WHERE problem = ?", favorite)`  
-    > **Don't use {favorite}, this would lead you to a hack if  you trust what people input**
+    > **Don't use {favorite}, this would lead you to a hack if you trust what people input**
+
 ## multi access
-- BEGIN TRANSACTION
-- COMMIT
-- ROLLBACK
+
+-   BEGIN TRANSACTION
+-   COMMIT
+-   ROLLBACK
+
 ## SQL injection attack
-> **Don't use {favorite}, this would lead you to a hack if  you trust what people input**
+
+> **Don't use {favorite}, this would lead you to a hack if you trust what people input**
+
+# Section 7
+
+-   `.schema`
+-   SELECT
+-   WHERE
+-   LIKE: `WHERE student_name  LIKE "%Potter";`
+
+## Statements
+
+**You should always capitalize your SQL key words like `SELECT`**
+
+-   Find the names and houses of students whose names begin with "H".
+    > `SELECT student_name, house FROM students WHERE student_name LIKE "H%";`  
+    > Yes, that's correct. In SQL, values after `=` is **case sensitive** and values after `LIKE` is **not** case sensitive¹. However, you can make your query case sensitive by making use of the `COLLATE` keyword. For example, you can write a query like this: `SELECT A FROM MyTbl WHERE A COLLATE Latin1_General_CS_AS = 'ABCdef'` to get the result in case-sensitive manner.
+-   ORDER BY
+    > `ASC` and `DESC`: ascending and descending.  
+    > `SELECT student_name, house FROM students WHERE student_name LIKE "H%" ORDER BY student_name, house ACS`  
+    > `SELECT house, COUNT(*) FROM students GROUP BY house;`  
+    > in the above, first sort _student_name_ then sort _house_
+-   LIMIT
+    > Show the first limited number of results  
+    > `SELECT * FROM students WHERE student_name LIKE "H%" ORDER BY student_name LIMIT 10;`
+-   AS
+    > `SELECT COUNT(*) AS number_of_students FROM students;`
+
+## Database Design
+
+student_name, house_name, head
+the house repeatedly, so we create a new table of house.
+
+### Design Principles
+
+-   Each table should be a collection of a **single entity**.
+-   For example, we should have a different table for each of students, house, and student-house assignments.
+
+    > The primary key of the assignments: ?     
+    > The primary key is inside of the current table, the foreing key is reference to another table.  
+    > **If there's not an assignment table, if I want change the name of a house, it would be a heavy work.**
+
+-   data types
+    -   INTEGER
+    -   TEXT
+    -   ...
+-   constraints
+    -   NOT NULL
+    - ...
+- JOIN  
+    > `SELECT house, COUNT(student_id) FROM assignments JOIN house ON house.id = assignments.house_id;`
+# Shorts
+## SQL 
+**The Structured Query Language**
+- CHAR and VARCHAR  
+    > Unlike C, CHAR(10) always store 10 memmories, VARCHAR(99) store 1,2,3,4,5... up to 99 memories.
+- choose the right  primary key, make sure it is **unique**
+- ID number, which is the primary key, should set it autoincrement
+## SELECT
+- Extract information from a table.
+    > `SELECT <columns> FROM <table> WHERE <predicate> ORDER BY <column>` 
+    > `*` : every column
+- SELECT(JOIN)
+    - Extract information from multiple tables  
+        > `SELECT users.fullname, moms.mother FROM users JOIN moms ON users.username = moms.username`  
+- UPDATE
+    > Modify information in a table.  
+    > `UPDATE <table> SET <column> = <value> WHERE <predicate>;`
+- DELETE
+    > Remove information from a table  
+    > `DELETE FROM users WHERE <predicate>;`
