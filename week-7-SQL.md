@@ -200,8 +200,7 @@ the house repeatedly, so we create a new table of house.
 ## SELECT
 
 -   Extract information from a table.
-    > `SELECT <columns> FROM <table> WHERE <predicate> ORDER BY <column>`
-    > `*` : every column
+    > `SELECT <columns> FROM <table> WHERE <predicate> ORDER BY <column>` > `*` : every column
 -   SELECT(JOIN)
     -   Extract information from multiple tables
         > `SELECT users.fullname, moms.mother FROM users JOIN moms ON users.username = moms.username`
