@@ -1,0 +1,14 @@
+HTTP/1.1 301 Moved Permanently
+Content-Length: 122
+Connection: keep-alive
+Content-Type: text/html
+Date: Sun, 02 Jul 2023 02:39:02 GMT
+Keep-Alive: timeout=4
+Location: http://www.yale.edu
+Proxy-Connection: keep-alive
+Server: Sun-ONE-Web-Server/6.1
+
+<HTML><HEAD><TITLE>Moved Permanently</TITLE></HEAD>
+<BODY><H1>Moved Permanently</H1>
+An error has occurred.
+</BODY></HTML>
