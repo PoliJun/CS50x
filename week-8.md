@@ -494,3 +494,10 @@ function greet() {
     > 
     > These are just a few examples, and there are many more HTTP status codes. Each status code provides information about the result of the HTTP request, allowing the client or server to understand the outcome of the communication.  
 ## HTML
+- <head>
+- <title>
+- opening tags and closing tags
+- common HTML tags  
+    - `<b>` `</b>`
+    - `<i>` `</i>`
+    - `<u>` `</u>`
