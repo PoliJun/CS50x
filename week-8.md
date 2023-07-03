@@ -324,3 +324,173 @@ function greet() {
         document.write(position.coords.latitude + "," + position.coords.longitude);
     })
     ```
+# Section 8
+## HTTP
+- concept of HTTP
+    > Hypertext Transfer Protocol
+-  code
+    > 404, 500
+## HTML
+- concept of HTML
+    > Hypertext Mark Language
+- structure of the document. 
+    > forked from <html>, there are <head> and <body> elements
+- style tag
+- table tag
+    ```html
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    ```
+## CSS
+- concept of CSS
+    > Cascading Style Sheet  
+    > *Cascading* means inheritance
+- syntax
+    ```css
+    selector
+    {
+        property: value;
+    }
+    ```
+- id selector
+    > `#idName`
+- class selector
+    > `.className`
+- color system
+    - hash code
+    - rgb
+    - ...
+- link external css file
+    ```html
+    <link rel="stylesheet" href="style.css" >
+    ```
+## JavaScript
+- document.
+- console in browser if things not going right
+
+# Shorts
+## Internet Primer
+- IP Address
+    - Uniquely identify itself on Internet
+    - The addressing scheme used by computers is known as IP addressing.
+    - As originally developed, the IP addressing scheme is a unique 32-bit address.
+    - Instead of representing these 32-bit addresses as hexadecimal, w represent them as four clusters of 8 bits using decimal notation.
+    - 0-255
+    - IPv6: 128-bits, 16bits * 8 = 128bits.
+- DHCP
+    - concept of DHCP
+        > *Dynamic Host Configuration Protocol*
+        > DHCP server. You --> DHCP server --> Internet
+- DNS
+    - Translate Host to IP Address
+    - Distribute
+- Access Points
+    - Router's job. Multiple devices use a same IP address. Connect to the Internet through the router.
+    - The Router have public IP address
+- Protocols
+    - Interact with each other.
+## IP
+- IP
+    - concept of IP
+        > *Internet Protocol*
+    - Information transfered from A to B
+    - We don't want to physically wire them all together, so this is where routers come back into play.
+    - A router generally knows which IP connected.
+    - The data isn't being sent as one huge block. Data is broken down into pieces.
+    - IP is also known as a connectionless protocol. There is not necessarily a defined path from the sender to the receiver, and vice versa.
+    - Drop packages.
+## TCP
+- concept of TCP
+    > Transmission Control Protocal
+- TCP/IP, these two protocal are so interrelated, but they are two separate protocals.
+- Garantee dilivery
+- port number, means a special service on the machine  
+- indicate how many splits the data is and order them, so they can recunstructed
+    - FTP port 21
+    - SMTP port 25
+    - DNS port 53
+    - HTTP port 80
+    - HTTPS port 443
+## HTTP
+- the concepte of HTTP
+    > Hypertext Transfer Protocal
+- HTTP is an application layer protocal.
+- specifically dictates the format by which clients **request** web pages from a server, and the format via which servers **return** information to clients.
+- Other application layer protocols
+    - FTP: File Transfer Protocol
+    - SMTP: File Transfer Protocol
+    - DDS: Data Distribution Service
+    - RDP: Remote Desktop Protocol
+    - XMPP: Extensible Message and Presence Protocal
+    - ...
+- You --> HTTP styled format --> cat.com
+- A line of the form
+    > `method request-target http-version`  
+    > `GET request-target HTTP/1.1`  
+    > `POST request-target HTTP/1.1`  
+- `GET` and `POST` method
+    > GET and POST are two commonly used methods in the HTTP (Hypertext Transfer Protocol) protocol for sending data between a client (e.g., web browser) and a server (e.g., website). Here's a brief explanation of each:
+    > 
+    > GET:
+    > - GET is a method used to retrieve data from a server.
+    > - When making a GET request, the client appends the data to the URL in the form of query parameters.
+    > - GET requests are typically used for fetching data, such as retrieving a webpage or an image.
+    > - Some key characteristics of GET requests include:
+    >   - They are idempotent, meaning that multiple identical requests will have the same result.
+    >   - They can be cached by the client or intermediary servers (e.g., proxy servers).
+    >   - They can be bookmarked or shared as the data is part of the URL.
+    > 
+    > POST:
+    > - POST is a method used to send data to a server to create or update a resource.
+    > - When making a POST request, the data is sent in the body of the request, rather than as part of the URL.
+    > - POST requests are typically used for submitting forms, uploading files, or making changes to a server-side resource.
+    > - Some key characteristics of POST requests include:
+    >   - They are not idempotent, meaning multiple identical requests can have different results.
+    >   - They are not cached by default, but can be cached if specifically allowed by the server.
+    >   - They are not bookmarkable or shareable as the data is not part of the URL.
+    > 
+    > In summary, GET is used for retrieving data, while POST is used for sending data to create or update resources.
+
+- HTTP status code
+    > Sure! Here is a list of some common HTTP status codes:
+    > 
+    > 1xx Informational:
+    > - 100 - Continue
+    > - 101 - Switching Protocols
+    > - 102 - Processing
+    > 
+    > 2xx Success:
+    > - 200 - OK
+    > - 201 - Created
+    > - 202 - Accepted
+    > - 204 - No Content
+    > 
+    > 3xx Redirection:
+    > - 300 - Multiple Choices
+    > - 301 - Moved Permanently
+    > - 302 - Found
+    > - 304 - Not Modified
+    > - 307 - Temporary Redirect
+    > - 308 - Permanent Redirect
+    > 
+    > 4xx Client Error:
+    > - 400 - Bad Request
+    > - 401 - Unauthorized
+    > - 403 - Forbidden
+    > - 404 - Not Found
+    > - 405 - Method Not Allowed
+    > - 409 - Conflict
+    > - 429 - Too Many Requests
+    > 
+    > 5xx Server Error:
+    > - 500 - Internal Server Error
+    > - 502 - Bad Gateway
+    > - 503 - Service Unavailable
+    > - 504 - Gateway Timeout
+    > 
+    > These are just a few examples, and there are many more HTTP status codes. Each status code provides information about the result of the HTTP request, allowing the client or server to understand the outcome of the communication.  
+## HTML
