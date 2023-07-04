@@ -307,36 +307,43 @@ function greet() {
         >     // code to run
         > });
         > ```
-- `src` an external js file
+-   `src` an external js file
     ```html
     <script src="hello.js"></script>
     ```
-- keyup key word
-- document, selector, event listener, parameters(event, function)
+-   keyup key word
+-   document, selector, event listener, parameters(event, function)
     ```js
     document.querySelector('#hello').addEventListener("click", function(){
         ...
     });
     ```
-- navigator, geolocation 
+-   navigator, geolocation
     ```js
-    navigator.geolocation.getCurrentPosition(function(position){
-        document.write(position.coords.latitude + "," + position.coords.longitude);
-    })
+    navigator.geolocation.getCurrentPosition(function (position) {
+        document.write(
+            position.coords.latitude + "," + position.coords.longitude
+        );
+    });
     ```
+
 # Section 8
+
 ## HTTP
-- concept of HTTP
+
+-   concept of HTTP
     > Hypertext Transfer Protocol
--  code
+-   code
     > 404, 500
+
 ## HTML
-- concept of HTML
+
+-   concept of HTML
     > Hypertext Mark Language
-- structure of the document. 
+-   structure of the document.
     > forked from <html>, there are <head> and <body> elements
-- style tag
-- table tag
+-   style tag
+-   table tag
     ```html
     <table>
         <tr>
@@ -345,159 +352,343 @@ function greet() {
         </tr>
     </table>
     ```
+
 ## CSS
-- concept of CSS
+
+-   concept of CSS
     > Cascading Style Sheet  
-    > *Cascading* means inheritance
-- syntax
+    > _Cascading_ means inheritance
+-   syntax
     ```css
-    selector
-    {
+    selector {
         property: value;
     }
     ```
-- id selector
+-   id selector
     > `#idName`
-- class selector
+-   class selector
     > `.className`
-- color system
-    - hash code
-    - rgb
-    - ...
-- link external css file
+-   color system
+    -   hash code
+    -   rgb
+    -   ...
+-   link external css file
     ```html
-    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="style.css" />
     ```
+
 ## JavaScript
-- document.
-- console in browser if things not going right
+
+-   document.
+-   console in browser if things not going right
 
 # Shorts
+
 ## Internet Primer
-- IP Address
-    - Uniquely identify itself on Internet
-    - The addressing scheme used by computers is known as IP addressing.
-    - As originally developed, the IP addressing scheme is a unique 32-bit address.
-    - Instead of representing these 32-bit addresses as hexadecimal, w represent them as four clusters of 8 bits using decimal notation.
-    - 0-255
-    - IPv6: 128-bits, 16bits * 8 = 128bits.
-- DHCP
-    - concept of DHCP
-        > *Dynamic Host Configuration Protocol*
+
+-   IP Address
+    -   Uniquely identify itself on Internet
+    -   The addressing scheme used by computers is known as IP addressing.
+    -   As originally developed, the IP addressing scheme is a unique 32-bit address.
+    -   Instead of representing these 32-bit addresses as hexadecimal, w represent them as four clusters of 8 bits using decimal notation.
+    -   0-255
+    -   IPv6: 128-bits, 16bits \* 8 = 128bits.
+-   DHCP
+    -   concept of DHCP
+        > _Dynamic Host Configuration Protocol_
         > DHCP server. You --> DHCP server --> Internet
-- DNS
-    - Translate Host to IP Address
-    - Distribute
-- Access Points
-    - Router's job. Multiple devices use a same IP address. Connect to the Internet through the router.
-    - The Router have public IP address
-- Protocols
-    - Interact with each other.
+-   DNS
+    -   Translate Host to IP Address
+    -   Distribute
+-   Access Points
+    -   Router's job. Multiple devices use a same IP address. Connect to the Internet through the router.
+    -   The Router have public IP address
+-   Protocols
+    -   Interact with each other.
+
 ## IP
-- IP
-    - concept of IP
-        > *Internet Protocol*
-    - Information transfered from A to B
-    - We don't want to physically wire them all together, so this is where routers come back into play.
-    - A router generally knows which IP connected.
-    - The data isn't being sent as one huge block. Data is broken down into pieces.
-    - IP is also known as a connectionless protocol. There is not necessarily a defined path from the sender to the receiver, and vice versa.
-    - Drop packages.
+
+-   IP
+    -   concept of IP
+        > _Internet Protocol_
+    -   Information transfered from A to B
+    -   We don't want to physically wire them all together, so this is where routers come back into play.
+    -   A router generally knows which IP connected.
+    -   The data isn't being sent as one huge block. Data is broken down into pieces.
+    -   IP is also known as a connectionless protocol. There is not necessarily a defined path from the sender to the receiver, and vice versa.
+    -   Drop packages.
+
 ## TCP
-- concept of TCP
+
+-   concept of TCP
     > Transmission Control Protocal
-- TCP/IP, these two protocal are so interrelated, but they are two separate protocals.
-- Garantee dilivery
-- port number, means a special service on the machine  
-- indicate how many splits the data is and order them, so they can recunstructed
-    - FTP port 21
-    - SMTP port 25
-    - DNS port 53
-    - HTTP port 80
-    - HTTPS port 443
+-   TCP/IP, these two protocal are so interrelated, but they are two separate protocals.
+-   Garantee dilivery
+-   port number, means a special service on the machine
+-   indicate how many splits the data is and order them, so they can recunstructed
+    -   FTP port 21
+    -   SMTP port 25
+    -   DNS port 53
+    -   HTTP port 80
+    -   HTTPS port 443
+
 ## HTTP
-- the concepte of HTTP
+
+-   the concepte of HTTP
     > Hypertext Transfer Protocal
-- HTTP is an application layer protocal.
-- specifically dictates the format by which clients **request** web pages from a server, and the format via which servers **return** information to clients.
-- Other application layer protocols
-    - FTP: File Transfer Protocol
-    - SMTP: File Transfer Protocol
-    - DDS: Data Distribution Service
-    - RDP: Remote Desktop Protocol
-    - XMPP: Extensible Message and Presence Protocal
-    - ...
-- You --> HTTP styled format --> cat.com
-- A line of the form
+-   HTTP is an application layer protocal.
+-   specifically dictates the format by which clients **request** web pages from a server, and the format via which servers **return** information to clients.
+-   Other application layer protocols
+    -   FTP: File Transfer Protocol
+    -   SMTP: File Transfer Protocol
+    -   DDS: Data Distribution Service
+    -   RDP: Remote Desktop Protocol
+    -   XMPP: Extensible Message and Presence Protocal
+    -   ...
+-   You --> HTTP styled format --> cat.com
+-   A line of the form
     > `method request-target http-version`  
     > `GET request-target HTTP/1.1`  
-    > `POST request-target HTTP/1.1`  
-- `GET` and `POST` method
+    > `POST request-target HTTP/1.1`
+-   `GET` and `POST` method
+
     > GET and POST are two commonly used methods in the HTTP (Hypertext Transfer Protocol) protocol for sending data between a client (e.g., web browser) and a server (e.g., website). Here's a brief explanation of each:
-    > 
+    >
     > GET:
-    > - GET is a method used to retrieve data from a server.
-    > - When making a GET request, the client appends the data to the URL in the form of query parameters.
-    > - GET requests are typically used for fetching data, such as retrieving a webpage or an image.
-    > - Some key characteristics of GET requests include:
-    >   - They are idempotent, meaning that multiple identical requests will have the same result.
-    >   - They can be cached by the client or intermediary servers (e.g., proxy servers).
-    >   - They can be bookmarked or shared as the data is part of the URL.
-    > 
+    >
+    > -   GET is a method used to retrieve data from a server.
+    > -   When making a GET request, the client appends the data to the URL in the form of query parameters.
+    > -   GET requests are typically used for fetching data, such as retrieving a webpage or an image.
+    > -   Some key characteristics of GET requests include:
+    >     -   They are idempotent, meaning that multiple identical requests will have the same result.
+    >     -   They can be cached by the client or intermediary servers (e.g., proxy servers).
+    >     -   They can be bookmarked or shared as the data is part of the URL.
+    >
     > POST:
-    > - POST is a method used to send data to a server to create or update a resource.
-    > - When making a POST request, the data is sent in the body of the request, rather than as part of the URL.
-    > - POST requests are typically used for submitting forms, uploading files, or making changes to a server-side resource.
-    > - Some key characteristics of POST requests include:
-    >   - They are not idempotent, meaning multiple identical requests can have different results.
-    >   - They are not cached by default, but can be cached if specifically allowed by the server.
-    >   - They are not bookmarkable or shareable as the data is not part of the URL.
-    > 
+    >
+    > -   POST is a method used to send data to a server to create or update a resource.
+    > -   When making a POST request, the data is sent in the body of the request, rather than as part of the URL.
+    > -   POST requests are typically used for submitting forms, uploading files, or making changes to a server-side resource.
+    > -   Some key characteristics of POST requests include:
+    >     -   They are not idempotent, meaning multiple identical requests can have different results.
+    >     -   They are not cached by default, but can be cached if specifically allowed by the server.
+    >     -   They are not bookmarkable or shareable as the data is not part of the URL.
+    >
     > In summary, GET is used for retrieving data, while POST is used for sending data to create or update resources.
 
-- HTTP status code
+-   HTTP status code
     > Sure! Here is a list of some common HTTP status codes:
-    > 
+    >
     > 1xx Informational:
-    > - 100 - Continue
-    > - 101 - Switching Protocols
-    > - 102 - Processing
-    > 
+    >
+    > -   100 - Continue
+    > -   101 - Switching Protocols
+    > -   102 - Processing
+    >
     > 2xx Success:
-    > - 200 - OK
-    > - 201 - Created
-    > - 202 - Accepted
-    > - 204 - No Content
-    > 
+    >
+    > -   200 - OK
+    > -   201 - Created
+    > -   202 - Accepted
+    > -   204 - No Content
+    >
     > 3xx Redirection:
-    > - 300 - Multiple Choices
-    > - 301 - Moved Permanently
-    > - 302 - Found
-    > - 304 - Not Modified
-    > - 307 - Temporary Redirect
-    > - 308 - Permanent Redirect
-    > 
+    >
+    > -   300 - Multiple Choices
+    > -   301 - Moved Permanently
+    > -   302 - Found
+    > -   304 - Not Modified
+    > -   307 - Temporary Redirect
+    > -   308 - Permanent Redirect
+    >
     > 4xx Client Error:
-    > - 400 - Bad Request
-    > - 401 - Unauthorized
-    > - 403 - Forbidden
-    > - 404 - Not Found
-    > - 405 - Method Not Allowed
-    > - 409 - Conflict
-    > - 429 - Too Many Requests
-    > 
+    >
+    > -   400 - Bad Request
+    > -   401 - Unauthorized
+    > -   403 - Forbidden
+    > -   404 - Not Found
+    > -   405 - Method Not Allowed
+    > -   409 - Conflict
+    > -   429 - Too Many Requests
+    >
     > 5xx Server Error:
-    > - 500 - Internal Server Error
-    > - 502 - Bad Gateway
-    > - 503 - Service Unavailable
-    > - 504 - Gateway Timeout
-    > 
-    > These are just a few examples, and there are many more HTTP status codes. Each status code provides information about the result of the HTTP request, allowing the client or server to understand the outcome of the communication.  
+    >
+    > -   500 - Internal Server Error
+    > -   502 - Bad Gateway
+    > -   503 - Service Unavailable
+    > -   504 - Gateway Timeout
+    >
+    > These are just a few examples, and there are many more HTTP status codes. Each status code provides information about the result of the HTTP request, allowing the client or server to understand the outcome of the communication.
+
 ## HTML
-- <head>
-- <title>
-- opening tags and closing tags
-- common HTML tags  
-    - `<b>` `</b>`
-    - `<i>` `</i>`
-    - `<u>` `</u>`
+
+-   `<head>`
+-   `<title>`
+-   opening tags and closing tags
+-   common HTML tags
+    -   `<b>` `</b>`: bold
+    -   `<i>` `</i>`: italic
+    -   `<u>` `</u>`: underlined
+    -   `<p>` `</p>`: paragraph
+    -   `<hX>` `</hX>`: headers 1 to 6 smaller
+    -   `<ul>` `</ul>`: unordered list
+    -   `<ol>` `</ol>`: ordered list
+    -   `<li>` `</li>`: items in ordered or unordered list
+    -   `<form>` `</form>`:
+    -   `<div>` `</div>`
+    -   `<input name=X type=Y />`: this is called self closing tag.
+    -   `<a href=X>`, `</a>`: anchor tag
+    -   `<img src=X ... />`
+    -   `<!--,-->` : comment tag
+-   HTML will not necessarily fail with syntax errors. it's up to you to be vigilant.
+
+## CSS
+
+-   the concept of CSS
+    > Cascading Style Sheet
+-   syntax
+    ```css
+    selector {
+        property: value;
+    }
+    ```
+-   selectors
+    > Certainly! Here are some of the most commonly used selectors in CSS:
+    >
+    > 1. Element Selector: Selects elements based on their HTML tag name.
+    >    Example: `p { color: blue; }` selects all `<p>` elements.
+    >
+    > 2. Class Selector: Selects elements based on their assigned class attribute.
+    >    Example: `.my-class { font-weight: bold; }` selects elements with `class="my-class"`.
+    >
+    > 3. ID Selector: Selects a single element based on its unique ID attribute.
+    >    Example: `#my-id { background-color: yellow; }` selects the element with `id="my-id"`.
+    >
+    > 4. Attribute Selector: Selects elements based on their attribute values.
+    >    Example: `input[type="text"] { border: 1px solid gray; }` selects `<input>` elements with `type="text"`.
+    >
+    > 5. Descendant Selector: Selects elements that are descendants of a specific parent element.
+    >    Example: `div p { color: red; }` selects all `<p>` elements that are descendants of `<div>`.
+    >
+    > 6. Child Selector: Selects elements that are direct children of a specific parent element.
+    >    Example: `ul > li { list-style-type: square; }` selects `<li>` elements that are direct children of `<ul>`.
+    >
+    > 7. Pseudo-Class Selector: Selects elements based on a state or condition.
+    >    Example: `a:hover { text-decoration: underline; }` selects `<a>` elements when hovered over.
+    >
+    > 8. Pseudo-Element Selector: Selects and styles a specific part of an element.
+    >    Example: `p::first-line { color: red; }` selects and styles the first line of `<p>` elements.
+    >
+    > 9. Universal Selector: Selects all elements on a web page.
+    >    Example: `* { margin: 0; padding: 0; }` selects and applies styles to all elements.
+    >
+    > These are just a few examples of CSS selectors, and there are many more available. CSS selectors allow you to target specific elements or groups of elements for applying styles and defining the appearance of your web page.
+-   common css properties
+    -   border: style color width
+    -   background-color: [keyword | #<6-digit hex>]
+    -   color: [keyword | #<6-digit hex>]
+    -   font-size: [absolute size | relative size]
+        > can use (small, medium, large), fixed points(10pt, 20pt), percentage(80%), or base off the most recent font size(smaller, larger)
+    -   font-family: [font name | generic name]
+    -   text-align: [left | right | center | justify]
+-   style tags
+-   link tags
+
+## JavaScript
+
+-   `<script>` tag
+-   Variables
+    -   no type specifer.
+    -   when a local variable is first declared, preface with the `var` keyword.
+-   Conditionals
+    -   `if`
+    -   `else if`
+    -   `else`
+    -   `switch`
+-   Loops
+
+    -   `for`
+    -   `while`
+    -   `do-while`
+
+-   Functions
+    -   `function` key word
+    -   functions can be anonymous.
+-   Object
+    > object-oriented
+    > analogous to struct in C
+    > have properties but also methods.
+    > object.method() is object-oriented, but function(object) is not.
+-   Loops(redux)
+    ```js
+    for (var key in object) {
+        // use object[key] in here
+        // or key in here
+    }
+    ```
+-   Functions(redux)
+    ```js
+    var nums = [1, 2, 3, 4, 5];
+    nums = nums.map(function (num) {
+        return num * 2;
+    });
+    ```
+-   Events
+    -   An _event_ in HTML and JavaScript is a response to user interaction with the web page.
+        > click on a button, a page has finished loading, hover over a portion, typed in an input field, etc.
+    -   JavaScript has support for _event handlers_, which are callback functions that respond to HTML events.
+        > Many HTML elements have support for events as an attribute.
+
+## DOM
+
+-   the concept of DOM
+    > Document Object Model
+-   document object controls whole page programtically
+-   DOM porperties
+
+    > Sure! Here are simple descriptions for each of the DOM properties you mentioned:
+    >
+    > -   `innerHTML`: Represents the HTML content of an element. It can be used to retrieve or modify the HTML markup inside the element.
+    >
+    > -   `nodeName`: Gets the name of the node, which is essentially the tag name of an element. For example, if the element is a paragraph `<p>`, the `nodeName` would be `"P"`.
+    >
+    > -   `id`: Represents the unique identifier of an element. It can be used to access and manipulate specific elements on the page.
+    >
+    > -   `parentNode`: Gets the parent node of an element. It allows you to traverse up the DOM tree to access and manipulate the parent element of a given element.
+    >
+    > -   `childNodes`: Represents a collection of child nodes (including elements, text nodes, and comment nodes) of an element. It allows you to access and iterate over the child nodes of an element.
+    >
+    > -   `attributes`: Represents a collection of attributes of an element. It allows you to access and manipulate the attributes (such as `class`, `src`, `href`, etc.) of an element.
+    >
+    > -   `style`: Represents the inline CSS styles of an element. It allows you to access and modify the CSS properties of an element, such as setting the background color, width, height, etc.
+    >
+    > These descriptions should give you a basic understanding of what each property does. Let me know if you have any further questions!
+
+-   DOM methods
+    > Certainly! Here are short descriptions for each of the DOM methods you mentioned:
+    >
+    > -   `getElementById(id)`: Retrieves the first element in the document with the specified `id` attribute. It allows you to access and manipulate a specific element using its unique identifier.
+    >
+    > -   `getElementsByTagName(tag)`: Retrieves a collection of elements in the document with the specified tag name. It allows you to access and manipulate multiple elements that share the same tag name.
+    >
+    > -   `appendChild(node)`: Appends a node as the last child of a specified parent node. It allows you to add a new element or node to an existing element, effectively inserting it as the last child.
+    >
+    > -   `removeChild(node)`: Removes a specified child node from its parent node. It allows you to remove an existing element or node from the DOM structure, effectively deleting it from the document.
+    >
+    > These descriptions should give you a basic understanding of what each method does. Let me know if you have any further questions!
+-   jQuery, an open source library
+    -   first example:
+        ```js
+        $("#colorDiv").css("background-color", "green");
+        ```
+    -   second example:
+        ```js
+        $(document).ready(function () {
+            $(".jQButton").click(function () {
+                $("#colorDiv").css(
+                    "background-color",
+                    this.innerHTML.toLowerCase()
+                );
+            });
+        });
+        ```
