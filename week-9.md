@@ -254,12 +254,12 @@
     ```js
     var xhttp = new XMLHttpRequest();
     ```
-- *onreadystatechange*
+-   _onreadystatechange_
     > After obtaining your new object, you need to define its onreadystatechange behavior.  
     > This is a function(typically an anonymous function) called when the asynchronous HTTP request has completed, and thus typically defines what is expected to change on your site.
-- `XMLHttpRequest`s have two additional properties
-    - `readyState`: will change from *1* to *4*
-    - `status`: will (hopefully) be `200(OK)`
-- `open()` and `send()`  
+-   `XMLHttpRequest`s have two additional properties
+    -   `readyState`: will change from _1_ to _4_
+    -   `status`: will (hopefully) be `200(OK)`
+-   `open()` and `send()`
     > Then just make your asynchronous request using the open() method to define the request and the send() method to actually send it.
-    > *There's a slightly different way to do this syntactically with jQuery!*
+    > _There's a slightly different way to do this syntactically with jQuery!_
